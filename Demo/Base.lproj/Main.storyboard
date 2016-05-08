@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WN-gv-Ukf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="8Z0-21-wTe" kind="embed" identifier="embedFaceTrackerViewController" id="91t-0T-LNy"/>
+                                </connections>
+                            </containerView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="u2c-sA-lHZ">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT3-BN-Lno">
+                                <rect key="frame" x="526" y="25" width="54" height="30"/>
+                                <state key="normal" title="Options"/>
+                                <connections>
+                                    <action selector="optionsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0L-ah-Py9"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zlH-dV-bhR">
+                                <rect key="frame" x="0.0" y="490" width="600" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlI-rf-M3p">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="Wolverine"/>
+                                        <connections>
+                                            <action selector="wolverineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tju-mA-tRg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaT-UP-OGV">
+                                        <rect key="frame" x="200" y="0.0" width="200" height="110"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="Ironman"/>
+                                        <connections>
+                                            <action selector="ironmanButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTp-iH-1q9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1k-0M-sKs">
+                                        <rect key="frame" x="400" y="0.0" width="200" height="110"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="Spidey"/>
+                                        <connections>
+                                            <action selector="spideyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGK-bZ-bgI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="PEd-lH-gld"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zlH-dV-bhR" secondAttribute="trailing" id="1w8-au-m7R"/>
+                            <constraint firstItem="DT3-BN-Lno" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="6ex-jQ-das"/>
+                            <constraint firstItem="4WN-gv-Ukf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="94r-dT-9aP"/>
+                            <constraint firstItem="u2c-sA-lHZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Adb-1k-dbp"/>
+                            <constraint firstItem="4WN-gv-Ukf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CCs-Ye-6Tz"/>
+                            <constraint firstAttribute="trailing" secondItem="4WN-gv-Ukf" secondAttribute="trailing" id="DSW-cY-PG3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4WN-gv-Ukf" secondAttribute="bottom" id="Dvd-OC-nPE"/>
+                            <constraint firstItem="u2c-sA-lHZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RJh-yA-D8b"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zlH-dV-bhR" secondAttribute="bottom" id="a3y-C5-Fya"/>
+                            <constraint firstAttribute="trailing" secondItem="DT3-BN-Lno" secondAttribute="trailing" constant="20" id="bto-Xf-Hlp"/>
+                            <constraint firstItem="4WN-gv-Ukf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="m7T-Yr-OKR"/>
+                            <constraint firstItem="DT3-BN-Lno" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="siZ-cU-1zU"/>
+                            <constraint firstItem="zlH-dV-bhR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wN3-g1-57o"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CCs-Ye-6Tz"/>
+                                <exclude reference="siZ-cU-1zU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="u2c-sA-lHZ" id="XEv-pU-hmz"/>
+                        <outlet property="faceTrackerContainerView" destination="4WN-gv-Ukf" id="cU8-tV-Dqp"/>
+                        <outlet property="ironmanButton" destination="UaT-UP-OGV" id="il1-74-opy"/>
+                        <outlet property="optionsButton" destination="DT3-BN-Lno" id="utG-iP-HcM"/>
+                        <outlet property="spideyButton" destination="H1k-0M-sKs" id="CDb-qa-Lh2"/>
+                        <outlet property="wolverineButton" destination="tlI-rf-M3p" id="g87-kW-H0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="317"/>
+        </scene>
+        <!--Face Tracker View Controller-->
+        <scene sceneID="tMQ-vQ-PVF">
+            <objects>
+                <viewController id="8Z0-21-wTe" customClass="FaceTrackerViewController" customModule="FaceTracker" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GEZ-a9-DmX"/>
+                        <viewControllerLayoutGuide type="bottom" id="q51-mN-gqp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7eX-xu-k1f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4S-Y2-CdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="1199"/>
+        </scene>
+    </scenes>
+</document>
