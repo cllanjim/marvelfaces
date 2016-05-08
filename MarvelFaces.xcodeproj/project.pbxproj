@@ -31,7 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CECE81011C7E17E6007345D1 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECE81011C7E17E6007345D1 /* MarvelFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE81041C7E17E6007345D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECE81061C7E17E6007345D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CECE81091C7E17E6007345D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		CECE81021C7E17E6007345D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CECE81011C7E17E6007345D1 /* Demo.app */,
+				CECE81011C7E17E6007345D1 /* MarvelFaces.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,9 +86,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CECE81001C7E17E6007345D1 /* Demo */ = {
+		CECE81001C7E17E6007345D1 /* MarvelFaces */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CECE81131C7E17E6007345D1 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = CECE81131C7E17E6007345D1 /* Build configuration list for PBXNativeTarget "MarvelFaces" */;
 			buildPhases = (
 				CECE80FD1C7E17E6007345D1 /* Sources */,
 				CECE80FE1C7E17E6007345D1 /* Frameworks */,
@@ -99,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = Demo;
+			name = MarvelFaces;
 			productName = Demo;
-			productReference = CECE81011C7E17E6007345D1 /* Demo.app */;
+			productReference = CECE81011C7E17E6007345D1 /* MarvelFaces.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CECE80FC1C7E17E6007345D1 /* Build configuration list for PBXProject "Demo" */;
+			buildConfigurationList = CECE80FC1C7E17E6007345D1 /* Build configuration list for PBXProject "MarvelFaces" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -132,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CECE81001C7E17E6007345D1 /* Demo */,
+				CECE81001C7E17E6007345D1 /* MarvelFaces */,
 			);
 		};
 /* End PBXProject section */
@@ -279,7 +279,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.utoronto.iosdevelopmentwithswift.facetracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MarvelFaces;
 			};
 			name = Debug;
 		};
@@ -297,14 +297,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.utoronto.iosdevelopmentwithswift.facetracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MarvelFaces;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CECE80FC1C7E17E6007345D1 /* Build configuration list for PBXProject "Demo" */ = {
+		CECE80FC1C7E17E6007345D1 /* Build configuration list for PBXProject "MarvelFaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CECE81111C7E17E6007345D1 /* Debug */,
@@ -313,7 +313,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CECE81131C7E17E6007345D1 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		CECE81131C7E17E6007345D1 /* Build configuration list for PBXNativeTarget "MarvelFaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CECE81141C7E17E6007345D1 /* Debug */,
