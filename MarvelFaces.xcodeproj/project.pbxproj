@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225CD6D01CE036CB00961EAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225CD6CF1CE036CB00961EAC /* Assets.xcassets */; };
+		225CD6D21CE036F000961EAC /* ironman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 225CD6D11CE036F000961EAC /* ironman.mp3 */; };
+		225CD6D41CE036FD00961EAC /* The-Wolverine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 225CD6D31CE036FD00961EAC /* The-Wolverine.mp3 */; };
+		225CD6D61CE03B5C00961EAC /* spideySense.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 225CD6D51CE03B5C00961EAC /* spideySense.mp3 */; };
 		CECE81051C7E17E6007345D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE81041C7E17E6007345D1 /* AppDelegate.swift */; };
 		CECE81071C7E17E6007345D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE81061C7E17E6007345D1 /* ViewController.swift */; };
 		CECE810A1C7E17E6007345D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECE81081C7E17E6007345D1 /* Main.storyboard */; };
-		CECE810C1C7E17E6007345D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECE810B1C7E17E6007345D1 /* Assets.xcassets */; };
 		CECE810F1C7E17E6007345D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECE810D1C7E17E6007345D1 /* LaunchScreen.storyboard */; };
 		CECE81241C7E1B21007345D1 /* FaceTracker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CECE81211C7E1B20007345D1 /* FaceTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CECE81251C7E1B27007345D1 /* FaceTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE81211C7E1B20007345D1 /* FaceTracker.framework */; };
@@ -31,11 +34,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		225CD6CF1CE036CB00961EAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		225CD6D11CE036F000961EAC /* ironman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ironman.mp3; sourceTree = "<group>"; };
+		225CD6D31CE036FD00961EAC /* The-Wolverine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The-Wolverine.mp3"; sourceTree = "<group>"; };
+		225CD6D51CE03B5C00961EAC /* spideySense.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spideySense.mp3; sourceTree = "<group>"; };
 		CECE81011C7E17E6007345D1 /* MarvelFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE81041C7E17E6007345D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECE81061C7E17E6007345D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CECE81091C7E17E6007345D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CECE810B1C7E17E6007345D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CECE810E1C7E17E6007345D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECE81101C7E17E6007345D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECE81211C7E1B20007345D1 /* FaceTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceTracker.framework; sourceTree = SOURCE_ROOT; };
@@ -73,9 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				CECE81041C7E17E6007345D1 /* AppDelegate.swift */,
+				225CD6D11CE036F000961EAC /* ironman.mp3 */,
+				225CD6D31CE036FD00961EAC /* The-Wolverine.mp3 */,
+				225CD6D51CE03B5C00961EAC /* spideySense.mp3 */,
 				CECE81061C7E17E6007345D1 /* ViewController.swift */,
+				225CD6CF1CE036CB00961EAC /* Assets.xcassets */,
 				CECE81081C7E17E6007345D1 /* Main.storyboard */,
-				CECE810B1C7E17E6007345D1 /* Assets.xcassets */,
 				CECE810D1C7E17E6007345D1 /* LaunchScreen.storyboard */,
 				CECE81211C7E1B20007345D1 /* FaceTracker.framework */,
 				CECE81101C7E17E6007345D1 /* Info.plist */,
@@ -143,8 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECE810F1C7E17E6007345D1 /* LaunchScreen.storyboard in Resources */,
-				CECE810C1C7E17E6007345D1 /* Assets.xcassets in Resources */,
+				225CD6D61CE03B5C00961EAC /* spideySense.mp3 in Resources */,
+				225CD6D41CE036FD00961EAC /* The-Wolverine.mp3 in Resources */,
+				225CD6D21CE036F000961EAC /* ironman.mp3 in Resources */,
 				CECE810A1C7E17E6007345D1 /* Main.storyboard in Resources */,
+				225CD6D01CE036CB00961EAC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

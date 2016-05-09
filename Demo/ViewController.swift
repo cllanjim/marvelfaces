@@ -7,8 +7,9 @@ class ViewController: UIViewController, FaceTrackerViewControllerDelegate {
     var currentEffectView = UIImageView()
     var faceTrackerViewController: FaceTrackerViewController?
     var pointViews = [UIView]()
-    var player = AVAudioPlayer()
     var currentViewName = "wolverine"
+    var playedSound: Bool = false;
+    var maskSoundEffect: AVAudioPlayer!
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var optionsButton: UIButton!
@@ -58,20 +59,22 @@ class ViewController: UIViewController, FaceTrackerViewControllerDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    
     @IBAction func wolverineButtonPressed(sender: UIButton) {
         currentEffectView.image = UIImage(named: "wolverine")
         currentViewName = "wolverine"
+        playedSound = false
     }
     
     @IBAction func ironmanButtonPressed(sender: UIButton) {
         currentEffectView.image = UIImage(named: "ironman")
         currentViewName = "ironman"
+        playedSound = false
     }
     
     @IBAction func spideyButtonPressed(sender: UIButton) {
         currentEffectView.image = UIImage(named: "spidey")
         currentViewName = "spidey"
+        playedSound = false
     }
     
     func setAnchorPoint(anchorPoint: CGPoint, forView view: UIView) {
@@ -99,14 +102,11 @@ class ViewController: UIViewController, FaceTrackerViewControllerDelegate {
                 let numPoints = points.getTotalNumberOFPoints()
                 for _ in 0...numPoints {
                     let view = UIView()
-                    //view.backgroundColor = UIColor.greenColor()
                     self.view.addSubview(view)
-                    
                     pointViews.append(view)
                 }
             }
             
-            // Set frame for each point view
             points.enumeratePoints({ (point, index) -> Void in
                 let pointView = self.pointViews[index]
                 let pointSize: CGFloat = 4
@@ -127,9 +127,6 @@ class ViewController: UIViewController, FaceTrackerViewControllerDelegate {
             newPos.x  = eyeToEyeCenter.x - viewWidth / 2.15
             newPos.y = eyeToEyeCenter.y - viewWidth * 0.65
             
-            print("computing face again")
-            music()
-            
             currentEffectView.frame = CGRectMake(newPos.x, newPos.y, viewWidth, viewHeight)
             currentEffectView.hidden = false
             
@@ -138,7 +135,10 @@ class ViewController: UIViewController, FaceTrackerViewControllerDelegate {
             let angle = atan2(points.rightEye[5].y - points.leftEye[0].y, points.rightEye[5].x - points.leftEye[0].x)
             currentEffectView.transform = CGAffineTransformMakeRotation(angle)
             
-            
+            if !playedSound {
+                music()
+                playedSound = true
+            }
         }
         else {
             currentEffectView.hidden = true
@@ -150,16 +150,25 @@ class ViewController: UIViewController, FaceTrackerViewControllerDelegate {
     }
     
     func music() {
-        
-        let url:NSURL = NSBundle.mainBundle().URLForResource("The-Wolverine", withExtension: "mp3")!
-        
-        do { player = try AVAudioPlayer(contentsOfURL: url, fileTypeHint: nil) }
-        catch let error as NSError { print(error.description) }
-        
-        player.numberOfLoops = 1
-        player.prepareToPlay()
-        player.play()
-        
+        var soundPath: String = ""
+        if currentViewName == "wolverine" {
+            soundPath = "The-Wolverine.mp3"
+        }
+        else if currentViewName == "ironman" {
+            soundPath = "ironman.mp3"
+        }
+        else {
+            soundPath = "spideySense.mp3"
+        }
+        let path = NSBundle.mainBundle().pathForResource(soundPath, ofType:nil)!
+        let url = NSURL(fileURLWithPath: path)
+        do {
+            let sound = try AVAudioPlayer(contentsOfURL: url)
+            maskSoundEffect = sound
+            sound.play()
+        } catch {
+            print("Something went wrong playing audio")
+        }
     }
     
 }
